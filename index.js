@@ -14,7 +14,7 @@ app.get('/scrape', async (req, res) => {
     // }
     
     try {
-        const data = await productData('clock'); 
+        const data = await productData('cartoons');
         res.json(data); 
     } catch (error) {
         console.error(error);
