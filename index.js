@@ -3,8 +3,7 @@ const express = require('express');
 const app = express(); 
 const port = process.env.PORT || 3002
 const functionRouter = require('./routes/functionrouter'); 
-const {productData} = require('./utils/productData')
-
+const {productData} = require('./utils/productData');
 
 app.use('/api', functionRouter);
 app.get('/scrape', async (req, res) => {
@@ -14,7 +13,7 @@ app.get('/scrape', async (req, res) => {
     // }
     
     try {
-        const data = await productData('cartoons');
+        const data = await productData('seafood');
         res.json(data); 
     } catch (error) {
         console.error(error);
